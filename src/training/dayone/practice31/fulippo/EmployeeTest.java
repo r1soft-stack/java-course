@@ -10,12 +10,22 @@ public class EmployeeTest {
         Director dir = new Director(200, "Direttò", "34582345234", 123190000_0, "Tempio 1", 123123_3);
 
 
-        cane.printEmployee();
-        admin.printEmployee();
-        man.printEmployee();
-        dir.printEmployee();
+        printEmployee(cane);
+        printEmployee(admin);
+        printEmployee(man);
+        printEmployee(dir);
+
 
         dir.raiseSalary(123_333);
-        dir.printEmployee();
+        EmployeeStockPlan plan = new EmployeeStockPlan();
+        printEmployee(dir, plan);
+    }
+
+    public static void printEmployee(Employee e){
+        System.out.println(String.format("Type: %s%n", e.getClass().getSimpleName()) + e.toString());
+    }
+
+    public static void printEmployee(Employee e, EmployeeStockPlan plan){
+        System.out.println( String.format("Type: %s%n", e.getClass().getSimpleName()) + e.toString() + String.format("Stock Options: %s%n", plan.grantStock(e)));
     }
 }

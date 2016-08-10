@@ -46,9 +46,10 @@ public class Employee {
         return salary;
     }
 
-    public void printEmployee(){
+    @Override
+    public String toString(){
 
-        System.out.printf("Name: %s%n EmpId: %s%n Ssn: %s%n Salary: %s%n",
+        return String.format("Name: %s%nEmpId: %s%nSsn: %s%nSalary: %s%n",
                 getName(), getEmpId(), getSsn(), NumberFormat.getCurrencyInstance().format(getSalary()));
 
     }

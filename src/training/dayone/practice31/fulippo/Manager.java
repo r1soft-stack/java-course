@@ -13,4 +13,9 @@ public class Manager extends Employee{
     public String getDept() {
         return dept;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + String.format("Department: %s%n", getDept());
+    }
 }
