@@ -58,7 +58,7 @@ public class Employee {
         System.out.println("EmployeeId: " + getEmpId()
                 + " Name: " + getName()
                 + " SSN: " + getSsn()
-                + " Salary: " + NumberFormat.getCurrencyInstance().format( (double) getSalary() )
+                + " Salary: " + NumberFormat.getCurrencyInstance().format(getSalary())
         );
     }*/
 

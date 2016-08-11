@@ -48,7 +48,7 @@ public class Employee {
     public void printEmployee (){
         System.out.printf("%nInformation about %s : salary %s, SSN %s, ID %d",
                 this.name,
-                NumberFormat.getCurrencyInstance().format((double)this.salary),
+                NumberFormat.getCurrencyInstance().format(this.salary),
                 this.ssn,
                 this.empId
         );

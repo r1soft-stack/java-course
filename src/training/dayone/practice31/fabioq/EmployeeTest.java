@@ -13,12 +13,24 @@ public class EmployeeTest {
 
         a1.raiseSalary(2_000);
 
-        e1.printEmployee();
-        m1.printEmployee();
-        a1.printEmployee();
-        d1.printEmployee();
+        System.out.println(e1.toString());
+        System.out.println(m1.toString());
+        System.out.println(d1.toString());
 
         a1.raiseSalary(-100);
         d1.setName("");
+
+        EmployeeStockPlan plan = new EmployeeStockPlan();
+        printEmployee(d1, plan);
+        printEmployee(m1, plan);
+    }
+
+    public static void printEmployee(Employee emp) {
+        System.out.println(emp);
+    }
+
+    public static void printEmployee(Employee emp, EmployeeStockPlan esp) {
+        printEmployee(emp);
+        System.out.println("Stock Options: " + esp.grantStock(emp));
     }
 }

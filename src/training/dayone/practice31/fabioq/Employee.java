@@ -1,7 +1,4 @@
 package training.dayone.practice31.fabioq;
-
-import com.sun.org.apache.xpath.internal.SourceTree;
-
 import java.text.NumberFormat;
 
 /**
@@ -35,12 +32,12 @@ public class Employee {
         this.salary = salary;
     }
 
-    public void printEmployee(){
-        System.out.println("Emp ID:    " + getEmpId() +
+    @Override
+    public String toString() {
+        return "Emp ID:    " + getEmpId() +
                 "\nName:      " + getName() +
                 "\nSSN:       " + getSsn() +
-                "\nSalary:    " + NumberFormat.getCurrencyInstance().format((double) getSalary()) +
-                "\n\n");
+                "\nSalary:    " + NumberFormat.getCurrencyInstance().format(getSalary());
     }
 
     public int getEmpId() {

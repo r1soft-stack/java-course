@@ -6,14 +6,14 @@ public class Main {
 
         PeerSingleton list1 = PeerSingleton.getInstance();
 
-        for( String hostName:list1.getHostNames()){
+        for( String hostName: PeerSingleton.getHostNames()){
             System.out.println("HostName: "+hostName);
 
         }
 
         PeerSingleton list2 = PeerSingleton.getInstance();
 
-        for( String hostName:list2.getHostNames()){
+        for( String hostName: PeerSingleton.getHostNames()){
             System.out.println("HostName: "+hostName);
 
         }
