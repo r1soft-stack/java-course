@@ -11,5 +11,8 @@ public class Main {
 
         System.out.println("Jane's withholding: " + jane.getWithholding());
         System.out.println("John's bonus: " + john.getBonus());
+
+        Customer jack = new Customer("Jack", Branch.MUMBAI);
+        System.out.println(jack.getBranch());
     }
 }
