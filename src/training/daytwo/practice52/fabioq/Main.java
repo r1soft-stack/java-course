@@ -14,5 +14,6 @@ public class Main {
 
         Customer jack = new Customer("Jack", Branch.MUMBAI);
         System.out.println(jack.getBranch());
+        System.out.println(jack.getClass());
     }
 }
