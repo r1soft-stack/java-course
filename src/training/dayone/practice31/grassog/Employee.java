@@ -48,12 +48,18 @@ public class Employee {
         }
     }
 
+    @Override
+    public String toString() {
+        return "EmpId: " + getEmpId() + "\nName: " + getName() + "\nSSN: " + getSsn() + "\nSalary: " + NumberFormat.getCurrencyInstance().format(getSalary());
+    }
+
+    /*
     public void printEmplyee(){
         System.out.println("EmployeeId: " + getEmpId()
                 + " Name: " + getName()
                 + " SSN: " + getSsn()
                 + " Salary: " + NumberFormat.getCurrencyInstance().format( (double) getSalary() )
         );
-    }
+    }*/
 
 }

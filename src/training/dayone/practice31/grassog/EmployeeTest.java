@@ -11,16 +11,26 @@ public class EmployeeTest {
         Admin admin = new Admin(304, "Bill Monroe", "108-23-6509", 75_002.34);
         Director director = new Director(12, "Susan Wehler", "099-45-2340", 120_567.36, "Global Marketing", 1_000_000.00);
 
-        engineer.printEmplyee();
-        manager.printEmplyee();
-        admin.printEmplyee();
-        director.printEmplyee();
+        EmployeeStockPlan employeeStockPlan = new EmployeeStockPlan();
 
-        engineer.raiseSalary(4);
-        manager.setName("Tonino");
+        printEmployee(engineer, employeeStockPlan);
+        printEmployee(manager, employeeStockPlan);
+        printEmployee(admin, employeeStockPlan);
+        printEmployee(director, employeeStockPlan);
 
+        engineer.raiseSalary(4000);
+        printEmployee(engineer, employeeStockPlan);
 
+    }
 
+    public static void printEmployee(Employee emp){
+        System.out.println("Employee type: " + emp.getClass().getSimpleName());
+        System.out.println(emp);
+    }
+
+    public static void printEmployee(Employee emp, EmployeeStockPlan employeeStockPlan){
+        printEmployee(emp);
+        System.out.println("Stock Options: " + employeeStockPlan.grantStock(emp));
     }
 
 

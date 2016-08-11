@@ -16,4 +16,8 @@ public class Director extends Manager {
         return budget;
     }
 
+    @Override
+    public String toString() {
+        return super.toString() + "\nBudget: " + getBudget();
+    }
 }
